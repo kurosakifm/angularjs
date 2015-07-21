@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<head>
+
+	<title>Development AngularJS</title>
+	
+		<!-- load bootstrap and Optional theme css -->
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+		
+		<!-- <link rel="stylesheet" href="Scripts/css/style.css"> -->
+		<!-- <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'> -->
+
+</head>
+
+
+<body>
+
+
+	<!-- HEADER AND NAVBAR -->
+	<header>
+		<nav class="navbar navbar-primary">
+			<div class="container">
+				<div class="navbar-header">
+
+					<div>
+
+						<a class="navbar-brand" href="#/about"> <img src="logo.jpg"
+							alt="angular" height="42" width="126">
+						</a> <a class="navbar-brand" href="#/View1">Self Service for Alert
+							Configuration</a>
+					</div>
+				</div>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#/View1"><i class="fa fa-home"></i> Home</a></li>
+					<li><a href="#/View2"><i class="fa fa-shield"></i> About</a></li>
+					<li><a href="#/View3"><i class="fa fa-comment"></i>
+							Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+
+
+
+	<!-- MAIN CONTENT AND INJECTED VIEWS -->
+
+
+
+
+	<div ng-view=""></div>
+
+
+
+	<!--Footer Panel-->
+	<div class="container">
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<div class="panel-footer">©2015 Capital One</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+			<!-- load angular and angular route -->
+			<script src="bower_components/angular/angular.min.js"></script>
+			<script src="bower_components/angular-route/angular-route.min.js"></script>
+			
+			
+			<!-- Modernizr -->
+			<script src="bower_components/modernizr/modernizr.js"></script>
+			
+			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+			<script src="bower_components/jquery/dist/jquery.min.js"></script>
+			
+			<!-- Latest compiled and minified bootstrap JavaScript -->
+			<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+			
+			
+			<script src="app.js"></script>
+
+		
+
+
+
+</body>
+
+
+</html>
