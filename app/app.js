@@ -1,4 +1,3 @@
-
 		var app = angular.module('app', [ "ngRoute" ]);
 
 		app.config(function($routeProvider) {
@@ -53,49 +52,48 @@
 			$scope.countries = [ 'USA', 'Canada', 'Australia', 'Singapore' ];
 
 			$scope.selectedCountry = $scope.countries[0];
-			
-			
+
+
 			$scope.businesses=['CapitalOne Bank','CapitalOne 360','Customer Profile',
 			                   'CapitalOne Credit Card','CapitalOne Auto Finance',
 			                	'CapitalOne Home Loans'
-			                   ]; 
-			
+			                   ];
+
 			$scope.selectedBusiness = $scope.businesses[0];
-			
+
 			$scope.cityName = "";
 			$scope.weatherInfo = "";
 			$scope.cityLat = "";
 			$scope.cityLong = "";
-			
-			
-			
-			
+
+
+
+
 			var cityName="";var weatherInfo="";var cityLat="";var cityLong="";
-			
+
 			$http.get('http://api.openweathermap.org/data/2.5/weather?q=california').then(function(resp) {
 			    console.log('Success', resp);
 			    console.log(resp.data.name);
 			    console.log(resp.data.weather[0].description);
-			    
+
 			    cityName	=resp.data.name;
 			    weatherInfo	=resp.data.weather[0].description;
 			    cityLat		=resp.data.coord.lat;
 			    cityLon		=resp.data.coord.lon;
-			    
-			    
-			    
+
+
+
 			    $scope.cityName=cityName;
 			    $scope.weatherInfo=weatherInfo;
 			    $scope.cityLat=cityLat;
 			    $scope.cityLon=cityLon;
-			    
+
 			    // For JSON responses, resp.data contains the result
 			  }, function(err) {
 			    console.error('ERR', err);
 			    // err.status will contain the status code
 			  })
-			
-			
-			
+
+
+
 		}
-	
